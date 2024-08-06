@@ -1,0 +1,7 @@
+Step:
+
+1. npm init -y
+2. npm i express ejs pg
+3. create db connection => https://node-postgres.com/features/connecting
+3. migration => https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-create-table/
+4. seeding => https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-insert-multiple-rows/

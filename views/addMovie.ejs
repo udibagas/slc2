@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add New Movie</title>
+  </head>
+  <body>
+    <h1>Add New Movie</h1>
+
+    <form method="post">
+      <p>
+        <label for="name">Name</label> <br />
+        <input type="text" name="name" id="name" />
+      </p>
+
+      <p>
+        <label for="released_year">Released Year</label> <br />
+        <input type="number" name="released_year" id="released_year" />
+      </p>
+
+      <p>
+        <label for="genre">Genre</label> <br />
+        <select name="genre" id="genre">
+          <option value="" selected disabled>-- Select Genre --</option>
+          <% genres.forEach(genre => { %>
+          <option value="<%= genre %>"><%= genre %></option>
+          <% }) %>
+        </select>
+      </p>
+
+      <p>
+        <label for="ProductionHouseId">Production House</label> <br />
+        <select name="ProductionHouseId" id="ProductionHouseId">
+          <option value="" selected disabled>-- Select PH --</option>
+          <% ph.forEach(el => { %>
+          <option value="<%= el.id %>"><%= el.name_prodHouse %></option>
+          <% }) %>
+        </select>
+      </p>
+
+      <p>
+        <!-- <button type="button" onclick="window.history.back()">Cancel</button> -->
+        <a
+          href="/movies"
+          style="
+            border: 1px solid #555;
+            padding: 2px 5px;
+            text-decoration: none;
+            background-color: red;
+            color: white;
+            border-radius: 4px;
+          "
+          >Cancel</a
+        >
+        <button type="submit">Save</button>
+      </p>
+    </form>
+  </body>
+</html>
